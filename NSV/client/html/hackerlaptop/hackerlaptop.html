@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Hackerlaptop</title>
+</head>
+<body>
+    <div class="laptop">
+        <div class="apps-selection">
+            <ul class="apps-list">
+                <li class="clickable"><img id="appstart-carsteal" src="./../img/laptop-app-carsteal-icon.png" alt=""><p>Carsteal</p></li>
+                <li class="clickable"><img id="appstart-darkweb" src="./../img/laptop-app-darkweb-icon.png" alt=""><p>Darkweb</p></li>
+                <li class="clickable"><img id="appstart-twitter" src="./../img/laptop-app-twitter-icon.png" alt=""><p>Twitter-Verlauf</p></li>
+                <li class="clickable"><img id="appstart-shutdown" src="./../img/laptop-app-shutdown-icon.png" alt=""><p>Shutdown</p></li>
+                <li class="clickable"><img id="appstart-vaulthack" src="./../img/laptop-app-vaulthack-icon.png" alt=""><p>Bankraub<br>Hack</p></li>
+            </ul>
+        </div>
+        <div class="apps">
+            <div id="app-carsteal" class="app">
+                <img class="closeApp clickable" src="./../img/close.png" alt="">
+                <h3 class="app-title">Auto-Diebstahl</h3>
+                <ul>
+                    <!--<li><img onclick="Emit('Polizei-Meldungen')" src="./../img/laptop-app-carsteal-lspd.png" alt=""><p>Verfolge den aktuellen Autodiebstahl (LSPD)</p></li>-->
+                    <li class="clickable" ><img onclick="Emit('Abliefern')" src="./../img/laptop-app-carsteal-call.png" alt=""><p>Liefer das Auto ab</p></li>
+                    <li class="clickable" ><img onclick="Emit('GpsHack')" src="./../img/laptop-app-carsteal-gps.png" alt=""><p>Hacke das GPS</p></li>
+                    <li class="clickable" ><img onclick="Emit('Beenden')" src="./../img/laptop-app-carsteal-cancel.png" alt=""><p>Breche den Autodiebstahl ab</p></li>
+                    <li class="clickable" ><img onclick="Emit('Starten')" src="./../img/laptop-app-carsteal-search.png" alt=""><p>Starte einen Autodiebstahl</p></li>
+                </ul>
+            </div>
+            <div id="app-darkweb" class="app">
+                <img class="closeApp clickable" src="./../img/close.png" alt="">
+                <h3 class="app-title">Darkweb</h3>
+                <img class="wip" src="./../img/laptop-wip.png" alt="">
+            </div>
+            <div id="app-twitter" class="app">
+                <img class="closeApp clickable" src="./../img/close.png" alt="">
+                <h3 class="app-title">Twitter-Verlauf</h3>
+                <ul id="app-twitter-ul"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const APP_CARSTEAL = 'carsteal'
+        const APP_DARKWEB = 'darkweb'
+        const APP_TWITTER = 'twitter'
+
+        var currentApp = undefined
+
+        document.getElementById('appstart-shutdown').onclick = () => {
+            if ('alt' in window) {
+                alt.emit('CloseLaptop')
+            }
+            currentApp = undefined
+            Style('app-carsteal').display = 'none'
+            Style('app-darkweb').display = 'none'
+            Style('app-twitter').display = 'none'
+        }
+        document.getElementById('appstart-carsteal').onclick = () => {
+            openApp(APP_CARSTEAL)
+        }
+        document.getElementById('appstart-darkweb').onclick = () => {
+            openApp(APP_DARKWEB)
+        }
+        document.getElementById('appstart-twitter').onclick = () => {
+            openApp(APP_TWITTER)
+        }
+        document.getElementById('appstart-vaulthack').onclick = () => {
+            currentApp = undefined
+            Style('app-carsteal').display = 'none'
+            Style('app-darkweb').display = 'none'
+            Style('app-twitter').display = 'none'
+            if ('alt' in window) {
+                alt.emit('CloseLaptop')
+                alt.emit('StartHack')
+            }
+        }
+
+        // Close button
+        for (const element of document.getElementsByClassName('closeApp')) {
+            element.onclick = () => {
+                currentApp = undefined
+                Style('app-carsteal').display = 'none'
+                Style('app-darkweb').display = 'none'
+                Style('app-twitter').display = 'none'
+            }   
+        }
+
+        // Open app
+        function openApp(appName) {
+            currentApp = appName
+            switch (appName) {
+                case APP_CARSTEAL:
+                    Style('app-carsteal').display = 'block'
+                    break;
+                case APP_DARKWEB:
+                    Style('app-darkweb').display = 'block'
+                    break;
+                case APP_TWITTER:
+                    Style('app-twitter').display = 'block'
+                    break;
+            }
+        }
+
+        // Alt emit listeners
+        if ('alt' in window) {
+            alt.on('AddTwitterMessage', text => {
+                var ul = document.getElementById('app-twitter-ul')
+                var li = document.createElement('li')
+                li.appendChild(document.createTextNode(text))
+                ul.appendChild(li)
+            })
+        }
+
+        //#region UTIL FUNCS
+
+        function Element(id) { return document.getElementById(id) }
+        function Style(id) { return Element(id).style }
+        function Log(text) { console.log(`[Hacker-Laptop] ${text}`) }
+        function Emit(action) { if ('alt' in window) { alt.emit('Carstealaction', action) } }
+
+        //#endregion
+
+        //#region TESTING
+
+        // Style('app-carsteal').display = 'block'
+        // Style('app-darkweb').display = 'block'
+        // Style('app-twitter').display = 'block'
+
+        //#endregion
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NSV HUD</title>
+    <script src="https://kit.fontawesome.com/a412d17519.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="indicators">
+        <ul>
+            <li>
+                <i class="fa fa-microphone-alt" aria-hidden="true" id="indicator_saltychat"></i>
+                <p class="car_background" id="text_saltychat" style="font-size: 17px;">1 Meter</p>
+            </li>
+            <li>
+            <li>
+                <i class="fa fa-medkit" aria-hidden="true" id="indicator_health"></i>
+                <div class="bar_background">
+                    <div class="bar_fill" id="bar_health"></div>
+                </div>
+            </li>
+            <li>
+                <i class="fa fa-shield" aria-hidden="true" id="indicator_armor"></i>
+                <div class="bar_background">
+                    <div class="bar_fill" id="bar_armor"></div>
+                </div>
+            </li>
+            <li>
+                <i class="fa fa-cutlery" aria-hidden="true" id="indicator_food"></i>
+                <div class="bar_background">
+                    <div class="bar_fill" id="bar_food"></div>
+                </div>
+            </li>
+            <li>
+                <i class="fa fa-tint" aria-hidden="true" id="indicator_drink"></i>
+                <div class="bar_background" >
+                    <div class="bar_fill" id="bar_drink"></div>
+                </div>
+            </li>
+            <!--<li id="li_fuel">
+                <img src="img/fuel.png" class="fa1" id="indicator_fuel" style="width: 44px; height: 44px;">
+                <p class="car_background" id="text_fuel" style="font-size: 17px;">N/A</p>
+            </li>-->
+            <li id="li_fuel">
+                <i class="fa fa-gas-pump" aria-hidden="true" id="indicator_fuel"></i>
+                <p class="car_background" id="text_fuel" style="font-size: 17px;">N/A</p>
+            </li>
+            <li id="li_speed">
+                <i class="fa fa-tachometer" aria-hidden="true" id="indicator_speed"></i>
+                <p class="car_background" id="text_speed" style="font-size: 17px;">N/A</p>
+            </li>
+            <li id="li_km">
+                <i class="fa fa-car" aria-hidden="true" id="indicator_km" style="float: left;"></i>
+                <p class="car_background" id="text_km" style="font-size: 17px;">N/A</p>
+            </li>
+            <li id="li_belt">
+                <img src="img/seatbelt_2.png" class="fa" style="width: 43px; height: 43px; float: left">
+                <p class="car_background" id="text_belt" style="font-size: 15px; float: right;">Nicht angeschnallt</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="vehicle" id="vehicle_container">
+        <ul id="vehicle_ul1">
+            <li onclick="onEngineClick()" style="margin-left: 0;"><img src="img/engine.png" alt="MOTOR"></li>
+            <li onclick="onSeatbeltClick()"><img src="img/seatbelt.png" alt="SITZGURT"></li>
+            <li onclick="onHoodClick()" style="margin-left: 100px;"><img src="img/hood.png" alt="MOTORHAUBE"></li>
+            <li onclick="onTrunkClick()"><img src="img/trunk.png" alt="KOFFERRAUM"></li>
+            <li onclick="onLightClick()"><img src="img/car-lights.png" alt="LICHT"></li>
+            <li class="vehicle_ul_margin" style="margin-left: 0;"><img src="img/window.png" alt="LICHT"></li>
+            <li class="vehicle_ul_margin"><img src="img/car-door-2.png" alt="LICHT"></li>
+            <li class="vehicle_ul_margin"><img src="img/seat.png" alt="LICHT"></li>
+            <li class="vehicle_ul_margin"><img src="img/seat.png" alt="LICHT"></li>
+            <li class="vehicle_ul_margin"><img src="img/car-door.png" alt="LICHT"></li>
+            <li class="vehicle_ul_margin"><img src="img/window-2.png" alt="LICHT"></li>
+            <li class="vehicle_ul_margin" style="margin-left: 0;"><img src="img/window.png" alt="LICHT"></li>
+            <li class="vehicle_ul_margin"><img src="img/car-door-2.png" alt="LICHT"></li>
+            <li class="vehicle_ul_margin"><img src="img/seat.png" alt="LICHT"></li>
+            <li class="vehicle_ul_margin"><img src="img/seat.png" alt="LICHT"></li>
+            <li class="vehicle_ul_margin"><img src="img/car-door.png" alt="LICHT"></li>
+            <li class="vehicle_ul_margin"><img src="img/window-2.png" alt="LICHT"></li>
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

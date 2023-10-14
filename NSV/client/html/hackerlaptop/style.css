@@ -1,0 +1,162 @@
+/* GENERAL USE */
+
+* {
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #424242; 
+} 
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.wip {
+    height: 10rem;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.laptop {
+    background-image: url("./../img/laptop-overlay.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    width: 1200px;
+    height: 823px;
+    margin: 0;
+    margin-left: 20rem;
+    margin-top: 2rem;
+    padding: 0;
+}
+
+.apps-list {
+    list-style: none;
+    float: left;
+    margin-left: 7.5rem;
+    margin-top: 7rem;
+}
+
+.apps-list li {
+    float: right;
+    margin-left: 3rem;
+}
+
+.apps-list li img {
+    width: 100px;
+    height: 100px;
+    background: #747474;
+    padding: 0.5rem;
+    border-radius: 100%;
+}
+
+.apps-list li p {
+    color: #F2F2F2;
+    text-align: center;
+    margin: 0.2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.app {
+    position: absolute;
+    list-style: none;
+    margin-top: 3.25rem;
+    margin-left: 10rem;
+    width: 55rem;
+    height: 35rem;
+    overflow: hidden;
+}
+
+.app {
+    display: none;
+}
+
+.closeApp {
+    float: right;
+    width: 1.25rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(236, 57, 57, 150);
+}
+
+.app-title {
+    color: #F2F2F2;
+    text-align: center;
+    margin: 0.2rem;
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 3rem;
+}
+
+.app ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    margin-left: 1.5rem;
+    margin-top: 8rem;
+    float: left;
+}
+
+/* CARSTEAL APP */
+
+#app-carsteal {
+    background: #242424;
+}
+
+#app-carsteal ul li {
+    width: 8rem;
+    float: right;
+    margin-left: 4rem;
+}
+
+#app-carsteal ul li img {
+    height: 8rem;
+    border-radius: 1%;
+}
+
+#app-carsteal ul li {
+    color: #F2F2F2;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* DARWEB APP */
+
+#app-darkweb {
+    background: #242424;
+}
+
+/* TWITTER HISTORY APP */
+
+#app-twitter {
+    background: #242424;
+}
+
+#app-twitter-ul {
+    width: 80%;
+    margin-top: 3rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    overflow:hidden;
+    overflow-y:scroll;
+    max-height: 25rem;
+    font-size: 1.5rem;
+    color: #F2F2F2;
+    font-family: 'Montserrat', sans-serif;
+}
+#app-twitter-ul li {
+    margin-top: 1.5rem;
+}

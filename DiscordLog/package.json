@@ -1,0 +1,10 @@
+{
+    "name": "nsv-discordlog",
+    "version": "1.0.0",
+    "type": "module",
+    "author": {
+      "name": "zManuu",
+      "url": "https://github.com/zManuu"
+    },
+    "main": "server.js"
+  }

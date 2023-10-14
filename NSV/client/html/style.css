@@ -1,0 +1,173 @@
+html {
+user-select: none;
+-moz-user-select: none;
+-webkit-user-drag: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+}
+body {
+user-select: none;
+-moz-user-select: none;
+-webkit-user-drag: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+}
+
+.indicators {
+    float: right;
+    margin-right: 3rem;
+    margin-top: 20%;
+    color: #504C4C;
+    opacity: 0.8;
+}
+.indicators ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.fa {
+    padding: 0.6rem;
+    font-size: 24px;
+    margin: 0;
+    margin-top: 0.9rem;
+    background-color: #46B6D1;
+    float: left;
+}
+#li_fuel{
+  height: 18rem;
+  /*margin-bottom: 3rem;*/
+}
+#li_belt {
+  margin-top: 0rem;
+}
+#li_km {
+  margin-bottom: 0rem;
+}
+.fa1 {
+  padding: 0.6rem;
+  font-size: 25px;
+  margin-top: 1rem;
+  background-color: #46B6D1;
+  float: left;
+
+}
+
+#indicator_saltychat {
+    padding: 0.7175rem 0.89rem;
+}
+#indicator_health {
+  padding: 0.625rem 0.65rem; 
+}
+#indicator_food {
+  margin-top: 0.9rem;
+  padding: 0.625rem 0.8rem;
+}
+#indicator_drink {
+  margin-top: 0.925rem;
+  padding: 0.63rem 0.9rem;
+}
+#indicator_speed {
+  margin-top: 0.9rem;
+  padding: 0.715rem 0.55rem;
+}
+#indicator_km {
+  padding: 0.719rem 0.65rem;
+}
+#indicator_armor {
+  padding: 0.625rem 0.65rem;
+  margin-top: 0.93rem;
+}
+#indicator_fuel {
+  margin-top: 0.93rem;
+  padding: 0.705rem 0.65rem;
+}
+.bar_health {
+  float: right;
+}
+
+#li_fuel, #li_speed, #li_belt, #li_km {
+    opacity: 0.0;
+}
+
+.bar_background {
+    float: right;
+    background-color: #504C4C;
+    height: 43px;
+    width: 180px;
+    margin-top: 0.9rem;
+    /*border-top-right-radius: 10px;*/
+    border-bottom-right-radius: 10px;
+    text-align: center;
+}
+.bar_fill {
+    height: 7px;
+    width: 130px;
+    float: left;
+    background-color: #46B6D1;
+    margin-top: 18px;
+    margin-bottom: 15px;
+    margin-left: 25px;
+    border-radius: 5px;
+}
+
+.car_background {
+    float: right;
+    background-color: #504C4C;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    width: 180px;
+    margin: 0;
+    margin-top: 13px;
+    /*border-top-right-radius: 10px;*/
+    border-bottom-right-radius: 10px;
+    color: #46B6D1;
+    text-align: center;
+}
+
+
+
+
+
+
+
+.vehicle {
+    width: 500px;
+    height: 240px;
+    margin-top: 750px;
+    margin-bottom: 50px;
+    margin-left: 650px;
+    float: left;
+    background: rgb(38,38,38);
+    border-width: medium;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: #cacaca;
+    opacity: 0.0;
+    padding: 17px;
+}
+.vehicle ul {
+    height: 200px;
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+.vehicle ul li {
+    float: left;
+    margin-left: 20px;
+}
+.vehicle ul li img {
+    width: 60px;
+    height: 60px;
+    background: rgb(26, 26, 26);
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.vehicle_ul_margin {
+    margin-top: 10px;
+}
+.bar_background {
+  float: right;
+}
